@@ -9,6 +9,32 @@ Real-time image translation platform leveraging Azure Cognitive Services for tex
 - Backend: Python services integration
 - Azure Services: Computer Vision, Translator, Speech Services
 
+
+### Application Screenshots
+####  Cloud architecture
+cloud_architecture diagram
+![cloud_architecture](docs/images/cloud_architecture_diagram.png)
+
+flow chart diagram
+![flow_chart](docs/images/flow_chart_diagram.png)
+
+#### User Interfaces
+main page
+![Text Extraction](docs/images/ui3.png)
+
+image processing / upload image
+![Text Extraction](docs/images/ui4.png)
+
+translated text and audio to the targeted language
+![Text Extraction](docs/images/ui5.png)
+
+original language text and audio
+![Text Extraction](docs/images/ui6.png)
+
+### Demo Video
+https://github.com/abdell-rabiai/Image-Text-Translator/docs/videos/demo.mp4
+
+
 ## Azure Services Setup
 
 ### 1. Computer Vision
@@ -93,23 +119,6 @@ azure_translation_app/
 └── requirements.txt
 ```
 
-### Application Screenshots
-####  Cloud architecture
-![cloud_architecture](docs/images/cloud_architecture_diagram.png)
-
-![flow_chart](docs/images/flow_chart_diagram.png)
-
-#### User Interfaces
-![Text Extraction](docs/images/ui3.png)
-
-![Text Extraction](docs/images/ui4.png)
-
-![Text Extraction](docs/images/ui5.png)
-
-![Text Extraction](docs/images/ui6.png)
-
-### Demo Video
-https://github.com/abdell-rabiai/Image-Text-Translator/docs/videos/demo.mp4
 
 ## Running the Application
 
