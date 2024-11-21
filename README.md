@@ -32,7 +32,8 @@ original language text and audio
 ![Text Extraction](docs/images/ui6.png)
 
 ### Demo Video
-https://github.com/abdell-rabiai/Image-Text-Translator/docs/videos/demo.gif
+![Demo of Image Text Translator](docs/videos/demo.gif)
+This GIF demonstrates the key features of the Image Text Translator project.
 
 
 ## Azure Services Setup
