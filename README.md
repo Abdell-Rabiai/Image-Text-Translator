@@ -69,7 +69,7 @@ pip install -r requirements.txt
 4. Configure .env:
 ```env
 AZURE_VISION_KEY=<vision-key>
-AZURE_VISION_ENDPOINT=https://<region>.api.cognitive.microsoft.com/
+AZURE_VISION_ENDPOINT=<vision-service-endpoint>
 AZURE_TRANSLATOR_KEY=<translator-key>
 AZURE_TRANSLATOR_REGION=<region>
 AZURE_SPEECH_KEY=<speech-key>

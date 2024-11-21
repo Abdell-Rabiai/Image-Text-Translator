@@ -1,0 +1,58 @@
+graph TD
+    subgraph "User Interface Layer" 
+        UI[("📱 Streamlit UI")]
+        Upload["📤 Image Upload"]
+        Download["📥 Downloads"]
+        style UI fill:#f9f0ff,stroke:#9d4edd,stroke-width:2px
+        style Upload fill:#f9f0ff,stroke:#9d4edd,stroke-width:2px
+        style Download fill:#f9f0ff,stroke:#9d4edd,stroke-width:2px
+    end
+
+    subgraph "Backend Services Layer"
+        Vision["🔍 Vision Service"]
+        Translator["🌐 Translator Service"]
+        Speech["🔊 Speech Service"]
+        style Vision fill:#e0f4ff,stroke:#0077b6,stroke-width:2px
+        style Translator fill:#e0f4ff,stroke:#0077b6,stroke-width:2px
+        style Speech fill:#e0f4ff,stroke:#0077b6,stroke-width:2px
+    end
+
+    subgraph "Azure Cloud Services"
+        CV["💻 Computer Vision API"]
+        TR["🔄 Translator API"]
+        TTS["🎙️ Speech Services API"]
+        style CV fill:#e9ffd7,stroke:#38b000,stroke-width:2px
+        style TR fill:#e9ffd7,stroke:#38b000,stroke-width:2px
+        style TTS fill:#e9ffd7,stroke:#38b000,stroke-width:2px
+    end
+
+    subgraph "Data Layer"
+        Cache[("💾 Session Cache")]
+        Files["📁 Output Files"]
+        style Cache fill:#fff3b0,stroke:#e09f3e,stroke-width:2px
+        style Files fill:#fff3b0,stroke:#e09f3e,stroke-width:2px
+    end
+
+    %% Flow Definition
+    Upload ==> UI
+    UI ==> Vision
+    Vision ==> CV
+    CV ==> Vision
+    Vision ==> Translator
+    Translator ==> TR
+    TR ==> Translator
+    Translator ==> Speech
+    Speech ==> TTS
+    TTS ==> Speech
+    Speech ==> Files
+    Files ==> Download
+    
+    %% Styling for arrows
+    linkStyle default stroke:#666,stroke-width:2px,fill:none
+    
+    %% Style Definitions
+    classDef default fill:#fff,stroke:#333,stroke-width:2px
+    classDef highlight fill:#ff7eee,stroke:#333,stroke-width:4px
+
+    %% Layout Direction
+    direction TB

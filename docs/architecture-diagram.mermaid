@@ -1,0 +1,41 @@
+graph TB
+    subgraph Frontend
+        UI[Streamlit UI]
+        Upload[Image Upload]
+        Download[Audio/Text Download]
+    end
+
+    subgraph Backend Services
+        Vision[Vision Service]
+        Translator[Translator Service]
+        Speech[Speech Service]
+    end
+
+    subgraph Azure Cloud
+        CV[Azure Computer Vision]
+        TR[Azure Translator]
+        TTS[Azure Speech Services]
+    end
+
+    subgraph Storage
+        Cache[Session Cache]
+        Files[Output Files]
+    end
+
+    Upload --> UI
+    UI --> Vision
+    Vision --> CV
+    CV --> Vision
+    Vision --> Translator
+    Translator --> TR
+    TR --> Translator
+    Translator --> Speech
+    Speech --> TTS
+    TTS --> Speech
+    Speech --> Files
+    Files --> Download
+    
+    style Frontend fill:#f9f,stroke:#333
+    style Backend Services fill:#bbf,stroke:#333
+    style Azure Cloud fill:#bfb,stroke:#333
+    style Storage fill:#ff9,stroke:#333
