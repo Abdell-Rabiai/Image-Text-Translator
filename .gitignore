@@ -32,7 +32,6 @@ output/
 output/audio/*
 output/text/*
 *.wav
-*.txt
 
 # Logs
 *.log
