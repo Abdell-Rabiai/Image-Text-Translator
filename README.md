@@ -32,7 +32,7 @@ original language text and audio
 ![Text Extraction](docs/images/ui6.png)
 
 ### Demo Video
-https://github.com/abdell-rabiai/Image-Text-Translator/docs/videos/demo.mp4
+https://github.com/abdell-rabiai/Image-Text-Translator/docs/videos/demo.gif
 
 
 ## Azure Services Setup
