@@ -96,12 +96,16 @@ azure_translation_app/
 ### Application Screenshots
 ####  Cloud architecture
 ![cloud_architecture](docs/images/cloud_architecture_diagram.png)
+
 ![flow_chart](docs/images/flow_chart_diagram.png)
 
 #### User Interfaces
 ![Text Extraction](docs/images/ui3.png)
+
 ![Text Extraction](docs/images/ui4.png)
+
 ![Text Extraction](docs/images/ui5.png)
+
 ![Text Extraction](docs/images/ui6.png)
 
 ### Demo Video
