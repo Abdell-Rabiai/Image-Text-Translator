@@ -95,16 +95,17 @@ azure_translation_app/
 
 ### Application Screenshots
 ####  Cloud architecture
-![Main Interface](docs/images/cloud_architecture_diagram.png)
-![Language Selection](docs/images/flow_chart_diagram.png)
+![cloud_architecture](docs/images/cloud_architecture_diagram.png)
+![flow_chart](docs/images/flow_chart_diagram.png)
 
 #### User Interfaces
-![Text Extraction](docs/images/ocr-result.png)
-![Translation Result](docs/images/translation.png)
-![Audio Generation](docs/images/audio-output.png)
+![Text Extraction](docs/images/ui3.png)
+![Text Extraction](docs/images/ui4.png)
+![Text Extraction](docs/images/ui5.png)
+![Text Extraction](docs/images/ui6.png)
 
 ### Demo Video
-https://github.com/yourusername/Image-Text-Translator/docs/videos/demo.mp4
+https://github.com/abdell-rabiai/Image-Text-Translator/docs/videos/demo.mp4
 
 ## Running the Application
 
