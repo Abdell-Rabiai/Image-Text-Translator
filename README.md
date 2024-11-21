@@ -25,14 +25,14 @@ main page
 image processing / upload image
 ![Text Extraction](docs/images/ui4.png)
 
-translated text and audio to the targeted language
+translated text and audiovideos to the targeted language
 ![Text Extraction](docs/images/ui5.png)
 
 original language text and audio
 ![Text Extraction](docs/images/ui6.png)
 
 ### Demo Video
-https://github.com/abdell-rabiai/Image-Text-Translator/docs/videos/demo.mp4
+https://github.com/abdell-rabiai/Image-Text-Translator/docs//demo.mp4
 
 
 ## Azure Services Setup
