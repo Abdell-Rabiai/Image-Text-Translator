@@ -1,22 +1,64 @@
-# Azure AI Translation App
+# Image-Text-Translator 🌍
 
-An interactive web application that extracts text from images, translates it into different languages, and provides text-to-speech functionality using Azure AI services.
+Real-time image translation platform leveraging Azure Cognitive Services for text extraction, translation, and speech synthesis.
 
-## Setup
+## Technical Architecture
 
-1. Create a virtual environment:
+### Core Components
+- Frontend: Streamlit web interface
+- Backend: Python services integration
+- Azure Services: Computer Vision, Translator, Speech Services
+
+## Azure Services Setup
+
+### 1. Computer Vision
+```bash
+az cognitiveservices account create \
+    --name "image-translator-vision" \
+    --resource-group "your-rg" \
+    --kind "ComputerVision" \
+    --sku "F0" \
+    --location "eastus" \
+    --yes
+```
+
+### 2. Translator
+```bash
+az cognitiveservices account create \
+    --name "image-translator-text" \
+    --resource-group "your-rg" \
+    --kind "TextTranslation" \
+    --sku "F0" \
+    --location "global" \
+    --yes
+```
+
+### 3. Speech Services
+```bash
+az cognitiveservices account create \
+    --name "image-translator-speech" \
+    --resource-group "your-rg" \
+    --kind "SpeechServices" \
+    --sku "F0" \
+    --location "eastus" \
+    --yes
+```
+
+## Project Setup
+
+### Environment Configuration
+1. Clone repository:
+```bash
+git clone https://github.com/yourusername/Image-Text-Translator.git
+cd Image-Text-Translator
+```
+
+2. Create virtual environment:
 ```bash
 python -m venv venv
-```
-
-2. Activate the virtual environment:
-- Windows:
-```bash
-venv\Scripts\activate
-```
-- Unix/Mac:
-```bash
-source venv/bin/activate
+source venv/bin/activate  # Linux/Mac
+# or
+venv\Scripts\activate     # Windows
 ```
 
 3. Install dependencies:
@@ -24,27 +66,82 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Create a `.env` file:
-- Copy `.env.example` to `.env`
-- Fill in your Azure credentials
+4. Configure .env:
+```env
+AZURE_VISION_KEY=<vision-key>
+AZURE_VISION_ENDPOINT=https://<region>.api.cognitive.microsoft.com/
+AZURE_TRANSLATOR_KEY=<translator-key>
+AZURE_TRANSLATOR_REGION=<region>
+AZURE_SPEECH_KEY=<speech-key>
+AZURE_SPEECH_REGION=<region>
+```
 
-5. Run the application:
+## Project Structure
+```
+azure_translation_app/
+├── backend/                 # Core services
+│   ├── vision_service.py    # OCR functionality
+│   ├── translator_service.py # Translation service
+│   └── speech_service.py    # Text-to-speech service
+├── tests/                   # Test suite
+│   ├── test_vision.py
+│   ├── test_translator.py
+│   └── test_speech.py
+├── images/                  # Test images
+├── output/                  # Generated files
+├── app.py                   # Streamlit interface
+└── requirements.txt
+```
+
+## Running the Application
+
+### Development Server
 ```bash
 streamlit run app.py
 ```
 
+### Testing
+```bash
+# Test individual services
+python tests/test_vision.py
+python tests/test_translator.py
+python tests/test_speech.py
+
+# Full pipeline test
+python tests/test_all_services.py
+```
+
 ## Features
+- OCR text extraction from images
+- Multi-language translation support
+- Neural text-to-speech synthesis
+- Audio file generation and download
+- Support for multiple image formats
+- Real-time processing
 
-- Image text extraction using Azure Computer Vision
-- Text translation using Azure Translator
-- Text-to-speech using Azure Speech Services
-- Support for multiple languages
-- Interactive web interface
+## Supported Languages
+- English (en-US)
+- Spanish (es-ES)
+- French (fr-FR)
+- Arabic (ar-SA)
+- German (de-DE)
 
-## Requirements
+## Technical Specifications
+- Python 3.10+
+- Azure Computer Vision v3.2
+- Neural Machine Translation
+- Neural Text-to-Speech synthesis
+- Streamlit web framework
+- PIL image processing
 
-- Python 3.8+
-- Azure subscription with:
-  - Computer Vision API
-  - Translator API
-  - Speech Services
+## Performance Optimizations
+- Session state management
+- Asynchronous processing
+- Caching mechanisms
+- Error handling with graceful degradation
+
+
+
+## Contact
+Abdelouahed rabiai - abdell.rabiai@gmail.com
+Project Link: https://github.com/yourusername/Image-Text-Translator
